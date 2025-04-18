@@ -1,0 +1,31 @@
+.scanner {
+      width: 100%;
+      max-width: 500px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background: #444;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .scam {
+      color: red;
+      font-weight: bold;
+    }
+    
+    .safe {
+      color: green;
+      font-weight: bold;
+    }
