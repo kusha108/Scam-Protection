@@ -1,0 +1,140 @@
+/* frontend/src/styles/App.css */
+
+/* Global body */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f; /* Dark background */
+  color: #e0f7fa;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Center app container */
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card container */
+.card {
+  background: #111; /* Dark card */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ffe0, 0 0 25px #00ffe0 inset;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px #00ffe0, 0 0 30px #00ffe0 inset;
+}
+
+/* Heading */
+.card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #00ffe0; /* Neon cyan */
+  text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #00ffe0; /* Neon border */
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+  background-color: #1a1a1a;
+  color: #e0f7fa;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #39ff14; /* Neon green on focus */
+  box-shadow: 0 0 8px #39ff14, 0 0 15px #39ff14;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #00ffe0, 0 0 15px #00ffe0;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button.clear {
+  background: #ff073a; /* Neon red */
+  color: white;
+}
+
+button:not(.clear) {
+  background: #39ff14; /* Neon green */
+  color: #0f0f0f;
+}
+
+button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffe0, 0 0 25px #00ffe0, 0 0 35px #00ffe0 inset;
+}
+
+/* Status and result messages */
+.status {
+  margin-top: 1rem;
+}
+
+.result {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
+}
+
+.result.safe {
+  color: #39ff14; /* Neon green */
+}
+
+.result.danger {
+  color: #ff073a; /* Neon red */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffe0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39ff14;
+}
