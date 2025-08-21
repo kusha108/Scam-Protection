@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* frontend/src/styles/App.css */
 
 /* Global body */
@@ -11,20 +10,11 @@ body {
 }
 
 /* Center app container */
-=======
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f2f2f2;
-}
-
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 .app {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   padding: 20px;
 }
 
@@ -54,30 +44,10 @@ body {
 }
 
 /* Textarea */
-=======
-}
-
-.card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-.card h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 textarea {
   width: 100%;
   padding: 1rem;
   border-radius: 12px;
-<<<<<<< HEAD
   border: 2px solid #00ffe0; /* Neon border */
   font-size: 1rem;
   resize: vertical;
@@ -94,14 +64,6 @@ textarea:focus {
 }
 
 /* Action buttons */
-=======
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  resize: vertical;
-  margin-bottom: 1rem;
-}
-
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 .actions {
   display: flex;
   justify-content: space-between;
@@ -114,34 +76,23 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-<<<<<<< HEAD
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 0 5px #00ffe0, 0 0 15px #00ffe0;
-=======
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 }
 
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-<<<<<<< HEAD
   box-shadow: none;
 }
 
 button.clear {
   background: #ff073a; /* Neon red */
-=======
-}
-
-button.clear {
-  background: #f44336;
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
   color: white;
 }
 
 button:not(.clear) {
-<<<<<<< HEAD
   background: #39ff14; /* Neon green */
   color: #0f0f0f;
 }
@@ -152,12 +103,6 @@ button:hover:not(:disabled) {
 }
 
 /* Status and result messages */
-=======
-  background: #4caf50;
-  color: white;
-}
-
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 .status {
   margin-top: 1rem;
 }
@@ -165,7 +110,6 @@ button:hover:not(:disabled) {
 .result {
   font-weight: bold;
   margin-top: 0.5rem;
-<<<<<<< HEAD
   text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
 }
 
@@ -193,14 +137,4 @@ button:hover:not(:disabled) {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #39ff14;
-=======
-}
-
-.result.safe {
-  color: #4caf50;
-}
-
-.result.danger {
-  color: #f44336;
->>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 }
