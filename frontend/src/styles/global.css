@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* frontend/src/styles/global.css */
 
 /* Dark neon theme */
@@ -100,3 +101,9 @@ input:focus, textarea:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: #39ff14;
 }
+=======
+body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6

@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ResultCard from './ResultCard';
+<<<<<<< HEAD
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+=======
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 
 function Home() {
   const [text, setText] = useState('');
@@ -10,9 +13,13 @@ function Home() {
   const [loading, setLoading] = useState(false);
 
   const checkScam = async () => {
+<<<<<<< HEAD
     if (!text.trim()) return;
     setLoading(true);
     setResult(null);
+=======
+    setLoading(true);
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
     try {
       const res = await axios.post('http://localhost:5000/api/detect', { text });
       setResult(res.data);
@@ -23,6 +30,7 @@ function Home() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center justify-center px-4 py-10">
       <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 text-center">
         Scam Detection AI
@@ -56,8 +64,30 @@ function Home() {
           <ResultCard result={result} />
         </div>
       )}
+=======
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
+      <h1 className="text-3xl font-bold mb-4">Scam Detection AI</h1>
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Paste email or message here..."
+        className="w-full max-w-xl h-40 p-4 text-black rounded-lg resize-none"
+      />
+      <button
+        onClick={checkScam}
+        className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold"
+        disabled={loading}
+      >
+        {loading ? 'Detecting...' : 'Detect Scam'}
+      </button>
+      {result && <ResultCard result={result} />}
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
     </div>
   );
 }
 
 export default Home;
+<<<<<<< HEAD
+=======
+//test
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6

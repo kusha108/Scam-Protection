@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 // frontend/src/components/Scanner.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { AiOutlineCheckCircle, AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai';
+=======
+import React, { useState } from 'react';
+import axios from 'axios';
+import '../styles/scanner.css';
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
 
 const Scanner = () => {
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
 
   const handleCheck = async () => {
@@ -61,8 +68,30 @@ const Scanner = () => {
           </div>
         )}
       </div>
+=======
+
+  const handleCheck = async () => {
+    const res = await axios.post('http://localhost:5000/api/scam/detect', { text });
+    setResult(res.data);
+  };
+
+  return (
+    <div className="scanner">
+      <h2>Scam Message Detector</h2>
+      <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Paste message here..." />
+      <button onClick={handleCheck}>Check Message</button>
+      {result && (
+        <p className={result.scam ? 'scam' : 'safe'}>
+          {result.scam ? '⚠️ Scam Detected!' : '✅ Safe Message'}
+        </p>
+      )}
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
     </div>
   );
 };
 
 export default Scanner;
+<<<<<<< HEAD
+=======
+//test
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6

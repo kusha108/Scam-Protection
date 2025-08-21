@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // frontend/src/components/ResultCard.js
 import React from 'react';
 import { AiOutlineCheckCircle, AiOutlineWarning } from 'react-icons/ai';
@@ -22,8 +23,23 @@ function ResultCard({ result }) {
         </h2>
       </div>
       <p className="mt-4 text-white text-lg">{result.message}</p>
+=======
+import React from 'react';
+
+function ResultCard({ result }) {
+  return (
+    <div className="mt-6 p-4 max-w-xl w-full rounded-lg shadow-lg bg-white text-black">
+      <h2 className="text-xl font-bold">
+        {result.isScam ? '⚠️ Scam Detected' : '✅ Safe Message'}
+      </h2>
+      <p className="mt-2">{result.message}</p>
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
     </div>
   );
 }
 
 export default ResultCard;
+<<<<<<< HEAD
+=======
+//test
+>>>>>>> 2fc15a662625aafe840c8b2d1efd9e249d5f08d6
