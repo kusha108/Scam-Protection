@@ -1,20 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const scamController = require('./controllers/scamController'); // module.exports style
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
 app.use(cors());
+app.use(bodyParser.json());
 app.use(express.json());
 
-// Default route
-app.get('/', (req, res) => {
-  res.send('Scam Protection API is running');
-});
+app.get('/', (req, res) => res.send('🚀 Node backend is running'));
 
-// Start the server
+app.post('/api/detect', scamController.detectScam || scamController); // support both exports
+
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`✅ Node.js backend running on http://localhost:${PORT}`);
 });
-//test

@@ -1,82 +1,151 @@
-/* frontend/src/styles/scanner.css */
-
-/* Scanner container */
-.scanner {
-  width: 100%;
-  max-width: 500px;
-  margin: 40px auto;
-  text-align: center;
-  background-color: #111; /* dark card background */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px #00ffe0, 0 0 25px #00ffe0 inset;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* scanner.css - neon black theme */
+:root{
+  --teal:#00f7da;
+  --teal-2:#00ffb3;
+  --glass: rgba(0,0,0,0.65);
 }
 
-.scanner:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px #00ffe0, 0 0 30px #00ffe0 inset;
+body, html, #root {
+  height:100%;
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background: #070707;
 }
 
-/* Heading */
-.scanner h2 {
-  color: #00ffe0; /* neon cyan */
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
+.scanner-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
 }
 
-/* Textarea */
-textarea {
-  width: 100%;
-  height: 120px;
-  margin-bottom: 15px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #00ffe0;
-  background-color: #1a1a1a;
-  color: #e0f7fa;
-  resize: none;
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.scanner-card{
+  width:820px;
+  max-width:95vw;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.45));
+  padding:36px;
+  border-radius:18px;
+  border:6px solid rgba(0,255,230,0.06);
+  box-shadow: 0 0 50px rgba(0,255,230,0.12), inset 0 0 40px rgba(0,255,230,0.02);
+  position:relative;
 }
 
-textarea:focus {
-  border-color: #39ff14; /* neon green on focus */
-  box-shadow: 0 0 8px #39ff14, 0 0 15px #39ff14;
+/* glowing rounded frame */
+.scanner-card::before{
+  content:"";
+  position:absolute;
+  inset:-18px;
+  border-radius:26px;
+  box-shadow: 0 0 40px rgba(0,255,230,0.8);
+  z-index:-1;
 }
 
-/* Button */
-button {
-  padding: 12px 25px;
-  background-color: #00ffe0; /* neon cyan */
-  color: #0f0f0f;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 5px #00ffe0, 0 0 15px #00ffe0;
+/* Title */
+.scanner-title{
+  color:var(--teal-2);
+  text-align:center;
+  font-size:30px;
+  margin:0 0 14px;
+  text-shadow:0 0 10px rgba(0,255,230,0.9);
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00ffe0, 0 0 25px #00ffe0, 0 0 35px #00ffe0 inset;
+/* Text area */
+.scanner-textarea{
+  width:100%;
+  min-height:160px;
+  background:#0b0b0b;
+  color:#bfeee6;
+  padding:18px;
+  border-radius:10px;
+  border:2px solid rgba(0,255,230,0.45);
+  resize:none;
+  outline:none;
+  font-family:'Courier New', monospace;
+  font-size:15px;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
 }
 
-/* Result messages */
-.scam {
-  color: #ff073a; /* neon red */
-  font-weight: bold;
-  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a;
-  margin-top: 15px;
-  font-size: 1.1rem;
+/* Buttons */
+.scanner-actions{
+  display:flex;
+  gap:20px;
+  justify-content:space-between;
+  margin-top:18px;
+  align-items:center;
 }
 
-.safe {
-  color: #39ff14; /* neon green */
-  font-weight: bold;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
-  margin-top: 15px;
-  font-size: 1.1rem;
+.btn-detect, .btn-clear{
+  padding:12px 22px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform .14s ease, box-shadow .14s ease;
 }
+
+.btn-detect{
+  background: linear-gradient(90deg,#00ff6a,#00ffaa);
+  color:#001;
+  box-shadow: 0 8px 30px rgba(0,255,200,0.18);
+}
+.btn-detect:hover{ transform: translateY(-3px) scale(1.02); }
+
+.btn-clear{
+  background: linear-gradient(90deg,#ff3b6b,#ff1f4a);
+  color:white;
+  box-shadow: 0 8px 30px rgba(255,50,100,0.12);
+}
+.btn-clear:hover{ transform: translateY(-3px) scale(1.02); }
+
+/* char count */
+.char-count{
+  margin-top:12px;
+  text-align:center;
+  color:#b5fbe6;
+}
+
+/* result box */
+.result-box{
+  margin-top:18px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:14px;
+  border-radius:10px;
+  justify-content:center;
+  text-align:left;
+}
+
+.result-scam{
+  background: linear-gradient(90deg,#a41616,#ff3b3b);
+  box-shadow: 0 0 30px rgba(255,0,50,0.18);
+  color:white;
+}
+
+.result-safe{
+  background: linear-gradient(90deg,#1fb65d,#00b894);
+  box-shadow: 0 0 30px rgba(0,255,150,0.18);
+  color:white;
+}
+
+.icon{
+  font-size:34px;
+  margin-left:6px;
+}
+
+.result-text .msg{
+  font-size:16px;
+  font-weight:700;
+}
+
+.result-text .prob{
+  font-size:13px;
+  opacity:0.9;
+  margin-top:6px;
+}
+
+/* small spinner */
+.spin{ animation: spin 1s linear infinite; }
+@keyframes spin{ from{transform:rotate(0)} to{transform:rotate(360deg)} }
