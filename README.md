@@ -1,4 +1,5 @@
 🛡️ Scam Protection with AI
+
 An AI-powered web application that detects and classifies suspicious messages, emails, and text content as Scam or Safe using Machine Learning.
 
 🚀 Live Demo
